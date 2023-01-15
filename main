@@ -1,0 +1,555 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  var _month = "มกราคม";
+  var _month2 = "January";
+  var _month3 = "1";
+  var day = "";
+  void Jan() {
+    setState(() {
+      _month = "มกราคม";
+      _month2 = "January";
+      _month3 = "1";
+    });
+  }
+
+  void Feb() {
+    setState(() {
+      _month = "กุมภาพันธุ์";
+      _month2 = "February";
+      _month3 = "2";
+    });
+  }
+
+  void Mar() {
+    setState(() {
+      _month = "มีนาคม";
+      _month2 = "Match";
+      _month3 = "3";
+    });
+  }
+
+  void Oct() {
+    setState(() {
+      _month = "ตุลาคม";
+      _month2 = "October";
+      _month3 = "10";
+    });
+  }
+
+  void Sep() {
+    setState(() {
+      _month = "กันยายน";
+      _month2 = "September";
+      _month3 = "9";
+    });
+  }
+
+  void Aug() {
+    setState(() {
+      _month = "สิงหาคม";
+      _month2 = "August";
+      _month3 = "8";
+    });
+  }
+
+  void Apr() {
+    setState(() {
+      _month = "เมษายน";
+      _month2 = "April";
+      _month3 = "4";
+    });
+  }
+
+  void May(){
+    setState(() {
+      _month = "พฤษภาคม";
+      _month2 = "May";
+      _month3 = "5";
+    });
+  }
+  void Jun(){
+    setState(() {
+      _month = "มิถุนายน";
+      _month2 = "June";
+      _month3 = "6";
+    });
+  }
+    void Jul() {
+      setState(() {
+        _month = "กรกฎาคม";
+        _month2 = "July";
+        _month3 = "7";
+      });
+    }
+
+    void Nov() {
+      setState(() {
+        _month = "พฤศจิกายน";
+        _month2 = "Novembar";
+        _month3 = "11";
+      });
+    }
+
+    void Dec() {
+      setState(() {
+        _month = "ธันวาคม";
+        _month2 = "December";
+        _month3 = "12";
+      });
+    }
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+          appBar: AppBar(
+            title: Text("CALENDER 2023"),
+          ),
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 20, left: 20, right: 20,bottom: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: Jan,
+                          child: Text("January"),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: Feb,
+                          child: Text("February"),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: Mar,
+                          child: Text("March"),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                     left: 20, right: 20,bottom: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: Apr,
+                          child: Text("April"),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: May,
+                          child: Text("May"),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: Jun,
+                          child: Text("June"),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),Padding(
+                  padding: const EdgeInsets.only(
+                       left: 20, right: 20,bottom: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: Jul,
+                          child: Text("July"),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: Aug,
+                          child: Text("August"),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: Sep,
+                          child: Text("September"),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),Padding(
+                  padding: const EdgeInsets.only(
+                     left: 20, right: 20,bottom: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: Oct,
+                          child: Text("October"),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: Nov,
+                          child: Text("November"),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: Dec,
+                          child: Text("December"),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(40.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white, //สีพื้นหลังของ Container
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 5,
+                            blurRadius: 7,
+                          ),
+                        ],
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Column(
+                          children: [
+                            Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Column(
+                                    children: [
+                                      Text(_month,
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 20)),
+                                      Text("2566",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 20)),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text(
+                                        _month3,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 50),
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text(_month2,
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 20)),
+                                      Text(
+                                        "2023",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20),
+                                      ),
+                                    ],
+                                  )
+                                ]),
+                            Divider(
+                              thickness: 1,
+                              color: Colors.black,
+                            ),
+                            Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Text(
+                                      "S",
+                                      style: TextStyle(
+                                          color: Colors.red, fontSize: 20),
+                                    ),
+                                    Text(
+                                      "M",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    Text(
+                                      "T",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    Text(
+                                      "W",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    Text(
+                                      "Th",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    Text(
+                                      "F",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    Text(
+                                      "S",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Divider(
+                              thickness: 1,
+                              color: Colors.black,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Text(
+                                      "1",
+                                      style: TextStyle(
+                                          color: Colors.red, fontSize: 20),
+                                    ),
+                                    Text(
+                                      "2",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    Text(
+                                      "3",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    Text(
+                                      "4",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    Text(
+                                      "5",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    Text(
+                                      "6",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    Text(
+                                      "7",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      width: 70,
+                                    ),
+                                    Text(
+                                      "8",
+                                      style: TextStyle(
+                                          color: Colors.red, fontSize: 20),
+                                    ),
+                                    SizedBox(
+                                      width: 65,
+                                    ),
+                                    Text(
+                                      "9",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    SizedBox(
+                                      width: 65,
+                                    ),
+                                    Text(
+                                      "10",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    SizedBox(
+                                      width: 60,
+                                    ),
+                                    Text(
+                                      "11",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    SizedBox(
+                                      width: 50,
+                                    ),
+                                    Text(
+                                      "12",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    SizedBox(
+                                      width: 60,
+                                    ),
+                                    Text(
+                                      "13",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    SizedBox(
+                                      width: 55,
+                                    ),
+                                    Text(
+                                      "14",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                SizedBox(
+                                  width: 0,
+                                ),
+                                Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Text(
+                                          "15",
+                                          style: TextStyle(
+                                              color: Colors.red, fontSize: 20),
+                                        ),
+                                        SizedBox(
+                                          width: 0,
+                                        ),
+                                        Text(
+                                          "16",
+                                          style: TextStyle(fontSize: 20),
+                                        ),
+                                        SizedBox(
+                                          width: 0,
+                                        ),
+                                        Text(
+                                          "17",
+                                          style: TextStyle(fontSize: 20),
+                                        ),
+                                        SizedBox(
+                                          width: 0,
+                                        ),
+                                        Text(
+                                          "18",
+                                          style: TextStyle(fontSize: 20),
+                                        ),
+                                        SizedBox(
+                                          width: 0,
+                                        ),
+                                        Text(
+                                          "19",
+                                          style: TextStyle(fontSize: 20),
+                                        ),
+                                        SizedBox(
+                                          width: 0,
+                                        ),
+                                        Text(
+                                          "20",
+                                          style: TextStyle(fontSize: 20),
+                                        ),
+                                        SizedBox(
+                                          width: 0,
+                                        ),
+                                        Text(
+                                          "21",
+                                          style: TextStyle(fontSize: 20),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+
+                            // Divider(thickness: 1,color: Colors.black,),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ));
+    }
+  }
+
